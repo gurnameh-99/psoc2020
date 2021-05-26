@@ -1,10 +1,14 @@
+from re import template
 from django.shortcuts import render, redirect
-from django.views import View
+from django.urls.base import reverse_lazy
+from django.views import View,generic
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-
+from django.views.generic import CreateView
 from .models import Project
 from mentees.models import Proposal
+from mentees.forms import ApplyForm
+
 
 
 #view for the main page
@@ -116,3 +120,9 @@ def conduct(request):
 def psoc2020(request):
 
     return render(request, 'projects/psoc2020.html')
+
+class proposal_apply(generic.CreateView):
+    form_class= ApplyForm
+    template_name = 'projects/proposal.html'
+    def get_success_url(self):
+        return reverse('projects:project_index')

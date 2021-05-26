@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:pk>/', views.ProjectDetail.as_view(), name='detail'),
     path('code_of_conduct/', views.conduct, name='conduct'),
     path('psoc2020/', views.psoc2020, name='psoc2020'),
+    path('apply/', views.proposal_apply.as_view(), name='proposal_apply'),
 ]

@@ -19,4 +19,4 @@ class Mentee(models.Model):
 class Proposal(models.Model):
     mentee = models.ForeignKey(Mentee, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    proposal_link = models.CharField(max_length=200, default='')
+    proposal_link = models.CharField(max_length=200)

@@ -1,0 +1,33 @@
+{% extends 'mentors/base.html' %} {% load static %} {% load getvaluefromdict %} {% block body_block %}
+<link rel="stylesheet" href="{% static 'mentors/css/base.css' %}" />
+<link rel="stylesheet" href="{% static 'mentors/css/detail.css' %}" />
+
+
+{% if is_mentor %}
+<h1>You are a Mentor</h1>
+{% else %}
+<div class="container mt-3 mb-4 card" style="background-color: white;text-align: center; width: fit-content;">
+    <div class="row  card-body">
+        <form enctype="multipart/form-data" method="POST" style="margin: 2vw;">
+            {% csrf_token %}
+            <h3>Submit your Proposal</h3>
+            <!-- <p>Please fill in this form to create an account!</p> -->
+            <hr />
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon p-2">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                    <input type="link" class="form-control" id="confirm_password" name="proposal_link"
+                        placeholder="Add Link to Proposal" required="required" />
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

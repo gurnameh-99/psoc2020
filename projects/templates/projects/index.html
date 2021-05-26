@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{% static 'mentors/css/base.css' %}" />
 <link rel="stylesheet" href="{% static 'mentors/css/projects.css' %}" />
 <section class="home-section">
-  {% comment %} <div class="container"> {% endcomment %}
+   <div class="container"> 
     <div class="proj-heading">
       <h1>Projects</h1>
     </div>
@@ -13,8 +13,7 @@
         <div class="card shadow">
           <div class="row">
             <div class="card-inner col-lg-4">
-              {% comment %} <img src="{% static 'mentors/img/card1.jpg' %}" class="card-img-top" alt="..." /> {%
-              endcomment %}
+               <img src="{% static 'mentors/img/card1.jpg' %}" class="card-img-top" alt="..." />
               <h5 class="card-title">{{ project.title }}</h5>
               <div class="mentor-name">
                 <h6>Mentor</h6>
@@ -34,7 +33,7 @@
               </div>
             </div>
             <div class="card-body col-lg-8">
-              {% comment %} <h5 class="card-title">{{ project.title }}</h5> {% endcomment %}
+               <h5 class="card-title">{{ project.title }}</h5> 
               <p class="card-text">
                 {{ project.description|slice:":300"|add:" ..." }}
               </p>
@@ -55,8 +54,8 @@
       </div>
       {% endif %}
     </div>
-    {% comment %}
-  </div> {% endcomment %}
+    
+  </div> 
 
 </section>
 {% endblock %}
