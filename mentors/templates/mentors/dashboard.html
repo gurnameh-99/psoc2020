@@ -38,8 +38,8 @@
             </div>
             <div class="card-text">
               <p>Applicants:</p>
-              {% for student in project.mentee_applications.all %} {% if
-              student.selected == NULL %}
+              {% for student in project.mentee_applications.all %} 
+              {% if student.selected == NULL %}
               <form method="post" action="{% url 'mentors:dashboard' %}">
                 {% csrf_token %}
                 <p>{{ student.user.username }}</p>
@@ -55,6 +55,7 @@
                 />
                 <input type="submit" value="Accept Application" />
               </form>
+              {% endif %}
               {% endfor %}
             </div>
           </div>
