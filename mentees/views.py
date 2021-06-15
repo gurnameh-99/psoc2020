@@ -33,7 +33,11 @@ class Register(View):
 
             self.registered = True
         else:
-            print(form.errors)
+            #TODO
+            #An <ul> with a <li> which contains error name and another <ul> with <li> of error description
+            #Both <ul> have errorlist class
+            #Concatenate css link with errorlist class or <style> element
+            return HttpResponse(str(form.errors))
         return render(request, self.template_name, {'form': form, 'registered': self.registered})
 
 
