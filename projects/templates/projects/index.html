@@ -14,17 +14,11 @@
       <div class="container mx-auto mt-4">
         <div class="row">
           {% if projects|length > 0 %} {% for project in projects %}
-          <div class="spacing2">
+          <div class="col-md-4 ">
             <div class="card shadow border rounded" style="width: 19rem;">
-              <div class="spacing">
-                <img class="img-fluid img-responsive rounded " src="{% static 'mentors/img/card2.jpg' %}">
-              </div>
+              <img class="img-fluid img-responsive rounded spacing" src="{% static 'mentors/img/card2.jpg' %}">
               <div class="spacing">
                 <h5 class="card-title">{{ project.title }}</h5>
-                <div class="mentor-name">
-                  <h6>Mentor</h6>
-                  <p>{{ project.mentor.name }}</p>
-                </div>
                 <p class="card-text">{{ project.description|slice:":200"|add:" ..." }}</p>
                 <span> <a href="{% url 'projects:detail' project.id %}" class="btn btn-success">Read More</a></span>
               </div>
