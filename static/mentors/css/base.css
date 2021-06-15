@@ -148,10 +148,10 @@ body {
   .main-section .main-register h3 span {
     font-size: 28px;
   }
-  img {
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
+  /* img {
+     margin-left: 50%;
+    transform: translateX(-50%); 
+  } */
 }
 
 @media only screen and (max-width: 420px) {
