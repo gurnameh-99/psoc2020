@@ -31,27 +31,20 @@
         <label class="pull-left checkbox-inline pb-3"
           ><input type="checkbox" /> Remember me</label
         >
-        {% comment %} <a href="#" class="pull-right">Forgot Password?</a> {% endcomment %}
       </div>
 
       {% if messages %}
-        <ul class="messages">
-          {% for message in messages %}
-            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-              {{ message }}
-            </li>
-          {% endfor %}
-        </ul>
+      <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+          {{ message }}
+        </li>
+        {% endfor %}
+      </ul>
       {% endif %}
     </form>
     <p class="text-center">
-<<<<<<< HEAD
       <a href="{% url 'mentees:register' %}">Create an Account</a>
-=======
-    {% comment %}
-      <a href="{% url 'mentors:register' %}">Create an Account</a>
-    {% endcomment %}
->>>>>>> master
     </p>
   </div>
 </section>
