@@ -11,9 +11,13 @@
         <div class="col-lg-8 main-section">
           <h2>PClub Summer Of Code</h2>
           <h3>
-            <a href="" class="typewrite" data-period="2000"
+            <a
+              href=""
+              class="typewrite"
+              data-period="2000"
               data-type='[ "Open Source Development", "Exciting Projects", "Real Exposure", "Register Now!" ]'
-              style="color: white">
+              style="color: white"
+            >
               <span class="wrap"></span>
             </a>
           </h3>
@@ -27,24 +31,24 @@
           {% if not user.is_authenticated %}
           <div class="main-register">
             <h3 class="pb-1"><span></span>Register Here!</h3>
-<<<<<<< HEAD
-            {% comment %} <a href="/mentors/register" class="mentor">
-              <button class="btn btn-lg mb-3">Mentor</button></a> {% endcomment %}
-=======
             {% comment %}
             <a href="/mentors/register" class="mentor">
               <button class="btn btn-lg mb-3">Mentor</button></a
             >
             {% endcomment %}
->>>>>>> master
 
             <a href="/mentees/register">
-              <button class="btn btn-lg mb-3">Mentee</button></a>
+              <button class="btn btn-lg mb-3">Mentee</button></a
+            >
           </div>
           {% endif %}
         </div>
         <div class="col-lg-4" id="img-logo">
-          <img src="{% static 'mentors/img/computer.png' %}" alt="icon" width="300px" />
+          <img
+            src="{% static 'mentors/img/computer.png' %}"
+            alt="icon"
+            width="300px"
+          />
         </div>
       </div>
     </div>
@@ -68,11 +72,18 @@
             Outreachy, etc.
           </p>
           <div class="manuals">
-            <a href="{% static 'mentors/img/PSoC_2021_Mentor_Manual.pdf' %}" class="mentor-manual btn btn-primary mb-3"
-              target="_blank">
+            <a
+              href="{% static 'mentors/img/PSoC_2021_Mentor_Manual.pdf' %}"
+              class="mentor-manual btn btn-primary mb-3"
+              target="_blank"
+            >
               Download Mentor Manual
             </a>
-            <a href="{% static 'mentors/img/PSoC_2021_Mentee_Manual.pdf' %}" target="_blank" class="mb-3">
+            <a
+              href="{% static 'mentors/img/PSoC_2021_Mentee_Manual.pdf' %}"
+              target="_blank"
+              class="mb-3"
+            >
               <button class="mentee-manual btn btn-primary">
                 Download Mentee Manual
               </button>
